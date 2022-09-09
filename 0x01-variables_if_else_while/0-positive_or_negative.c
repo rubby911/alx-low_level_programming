@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-
-/*Return: Always 0 (Success)*/
-
+/**
+* main - Entry point
+*
+* Return: Always 0 (Succes)
+*/
 int main(void)
 {int n;
 srand(time(0));
