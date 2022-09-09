@@ -8,8 +8,8 @@
 int main(void)
 {char abc = 'a';
 for (; abc <= 'z'; abc++)
-
-{if (abc != 'e' && abc != 'q')
+{
+if (abc != 'e' && abc != 'q')
 {putchar(abc);
 }
 }
