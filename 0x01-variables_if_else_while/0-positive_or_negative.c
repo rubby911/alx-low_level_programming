@@ -3,7 +3,8 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/*Return: 0 (Always Succes) */
+
 int main(void)
 {int n;
 srand(time(0));
