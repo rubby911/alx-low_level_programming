@@ -3,7 +3,8 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/*Return: 0 (Always Succes) */
+
+/*Return: Always 0 (Success)*/
 
 int main(void)
 {int n;
