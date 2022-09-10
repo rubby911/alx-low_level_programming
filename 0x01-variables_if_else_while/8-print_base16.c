@@ -8,7 +8,7 @@
 int main(void)
 {char first = '0';
 char letter2 = 'a';
-for (; first < '9'; first++)
+for (; first <= '9'; first++)
 {putchar(first);
 for (; letter2 <= 'f'; letter2++)
 {putchar(letter2);
