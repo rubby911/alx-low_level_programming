@@ -6,13 +6,12 @@
 * Return: Always 0 (Succes)
 */
 int main(void)
-{char first = 'a';
-char letter2 = '0';
-for (; first <= '9'; first++)
-{putchar(first);
+{char first = '0';
+char letter2 = 'a';
 for (; letter2 <= 'f'; letter2++)
-{putchar(letter2);
-}
+{for (; first <= '9'; first++)
+{putchar(first);
+}putchar(letter2);
 }
 putchar('\n');
 return (0);
