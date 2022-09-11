@@ -11,7 +11,8 @@ int main(void)
 for (first = 0; first < 100; first++)
 {
 for (second = 0; second < 100; second++)
-{if (first < second)
+{
+if (first < second)
 {putchar((first / 10) + 48);
 putchar((first % 10) + 48);
 putchar(' ');
