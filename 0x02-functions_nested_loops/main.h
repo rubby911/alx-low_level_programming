@@ -13,7 +13,7 @@ int _putchar(char c)
 {return (write(1, &c, 1));
 }
 
-void print_alphabet(void)
+/**void print_alphabet(void)
 {char a = a;
 for (; a <= 'z'; a++)
 {_putchar(a);
@@ -21,4 +21,5 @@ _putchar('\n');
 }
 return;
 }
+*/
 
