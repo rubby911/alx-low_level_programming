@@ -6,7 +6,7 @@
 *Return: eiter 0 or 1
 */
 
-int _isalpha(int c)
+int _islower(int c);
 {
 if (c >= 97 && c <= 122)
 {
