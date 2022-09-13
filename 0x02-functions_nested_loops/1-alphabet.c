@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-*Prints Alphabet a-z.
+*print_alphabet -prints alphabets a-z
 *
 *Return: Always 0.
 */
