@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* _isalpha - Checlks if a given letter is lower
-*c - letter to check
+*_islower - Checlks if a given letter is lower
+*@c: The letter that will be checked
 *Return: eiter 0 or 1
 */
 
