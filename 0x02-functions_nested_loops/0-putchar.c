@@ -8,7 +8,7 @@
 
 int main(void)
 {char mine;
-mine = _puthar(_putchar);
+mine = _putchar('o');
 putchar('\n');
 return (0);
 }
