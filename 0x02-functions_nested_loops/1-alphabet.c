@@ -5,12 +5,16 @@
 *
 *Return: Always 0.
 */
+void print_alphabet(void)
+{char a = 'a';
+for (; a <= 'z'; a++)
+{_putchar(a);
+}
+_putchar('\n');
+}
+
 
 int main(void)
-{char mine;
-mine = _putchar('o');
-_putchar('a');
-print_alphabet();
-_putchar('\n');
+{
 return (0);
 }
