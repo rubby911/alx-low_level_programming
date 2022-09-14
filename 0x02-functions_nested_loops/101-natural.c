@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
-*mymain - function that finds and print multiple numbers from 0 - 1024
+*main - function that finds and print multiple numbers from 0 - 1024
 *
 *
 * Return: nothing
 */
-int mymain(void)
+int main(void)
 {int a, b;
 b = 0;
 for (a = 0; a < 1024; a++)
