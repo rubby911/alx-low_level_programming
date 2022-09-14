@@ -2,7 +2,7 @@
 
 /**
 *fibonacci- a function that that prints multiples of 3 and 9.
-*
+*main - returns nothing
 * Return: 0
 */
 
@@ -20,7 +20,7 @@ printf("%d\n", j);
 return (0);
 }
 
-int main()
+int main(void)
 {
 return (0);
 }
