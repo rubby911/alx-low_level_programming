@@ -22,7 +22,7 @@ if (j == 0)
 {
 _putchar('0');
 }
-else if (c < 10)
+else if (k < 10)
 {_putchar(' ');
 _putchar(' ');
 _putchar('0' + o);
@@ -40,10 +40,11 @@ _putchar('0' + o);
 }
 if (j < n)
 {
-_putchar(',')
+_putchar(',');
 _putchar(' ');
 }
 else
 {_putchar('\n');
+}
 }
 }
