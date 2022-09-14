@@ -18,3 +18,4 @@ int print_last_digit(int a);void jack_bauer();
 void times_table(void);
 int add(int j, int k);
 void print_to_98(int a);
+void print_times_table(int n);
