@@ -19,3 +19,8 @@ i++;
 printf("%d\n", j);
 return (0);
 }
+
+int main()
+{
+return (0);
+}
