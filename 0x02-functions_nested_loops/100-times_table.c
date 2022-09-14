@@ -8,36 +8,41 @@
 */
 
 void print_times_table(int n)
-{int a, b, c, d, e, f;
-a = 0;
+{int a, b, c;
 if (n >= 0 && n <= 15)
 {
-while (a <= n)
-{b = 0;
-while (b <= n)
+for (b = 0; b <= n; b++)
 {
-c = a *b;
-d = c % 10;
-e = c % 100 / 10;
-f = c / 100;
-if (f == 0 && b != 0)
-{_putchar(' ');
+for (c = 0; c <= n; c++)
+{a = b * c;
+if (c == 0)
+{_putchar('0');
 }
-else
-{_putchar(e + '0');
-}
-else if (f != 0)
-{_putchar(f + '0');
-_putchar(e + '0');
-}
-_putchar(d + '0');
-if (b != n)
+else if (c != 0 && a < 10)
 {_putchar(',');
 _putchar(' ');
+_putchar(' ');
+_putchar(' ');
+_putchar(a + '0');
 }
-b++;
+else if (a < 100)
+{_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(a / 10 + '0');
+_putchar(a % 10 + '0');
+}
+else if (a > 99)
+{_putchar(',');
+_putchar(' ');
+_putchar(((a / 10)) / 10 + '0');
+_putchar((a / 10) % 10 + '0');
+_putchar(a % 10 + '0');
+}
 }
 _putchar('\n');
-a++;
 }
 }
+}
+
+
