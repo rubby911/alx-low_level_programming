@@ -9,14 +9,12 @@
 */
 int main(void)
 {int a, b;
-b = 0;
-for (a = 0; a < 1024; a++)
-{
-if (a % 3 == 0 || a % 5 ==  0)
-{
-b += a;
+while (a < 1024)
+{if ((a % 3) == 0 || (a % 5) == 0)
+{b += a;
 }
-printf("%d\n", b);
+b++;
 }
-return (0);
+printf("%d\n");
+retun (0);
 }
