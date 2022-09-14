@@ -1,26 +1,29 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
-*fibonacci- a function that that prints multiples of 3 and 9.
-*main - returns nothing
+*main- a function that that prints multiples of 3 and 9.
+*
 * Return: 0
 */
 
-int fibonacci(void)
-{int i, j;
-i = 0;
-while (i < 1024)
-{
-if ((i % 3) == 0 || (i % 5) == 0)
-{j += i;
-}
-i++;
-}
-printf("%d\n", j);
-return (0);
-}
-
 int main(void)
+{long long int a, b, c;
+long int d;
+int e;
+a = 0;
+b = 1;
+c = 1;
+e = 50;
+for (d = 0; d <= e; d++)
 {
+printf("%li", c);
+a = b;
+b = c;
+c = a + b;
+if (d < 50)
+{
+printf(", ");
+}
+printf("\n");
 return (0);
 }
