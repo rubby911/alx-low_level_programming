@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
 *fibonacci- a function that that prints multiples of 3 and 9.
