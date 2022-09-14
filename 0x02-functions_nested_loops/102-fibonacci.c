@@ -20,7 +20,7 @@ printf("%li", c);
 a = b;
 b = c;
 c = a + b;
-if (d <= 50)
+if (d <= 49)
 {
 printf(", ");
 }
