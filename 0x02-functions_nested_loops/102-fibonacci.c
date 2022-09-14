@@ -13,7 +13,7 @@ int e;
 a = 0;
 b = 1;
 c = 1;
-e = 50;
+e = 49;
 for (d = 0; d <= e; d++)
 {
 printf("%li", c);
@@ -24,7 +24,7 @@ if (d <= 49)
 {
 printf(", ");
 }
-printf("\n");
 }
+printf("\n");
 return (0);
 }
