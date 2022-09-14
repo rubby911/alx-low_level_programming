@@ -4,8 +4,6 @@
 /**
 *main - Prints sum of finobacci numbers
 *
-
-*
 * Return: nothing
 */
 int main(void)
