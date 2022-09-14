@@ -25,5 +25,6 @@ if (d < 50)
 printf(", ");
 }
 printf("\n");
+}
 return (0);
 }
