@@ -16,7 +16,7 @@ c = 1;
 e = 50;
 for (d = 0; d <= e; d++)
 {
-printf("%li", c);
+printf("%lli", c);
 a = b;
 b = c;
 c = a + b;
