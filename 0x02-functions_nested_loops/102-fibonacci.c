@@ -7,7 +7,7 @@
 */
 
 int main(void)
-{long long int a, b, c;
+{long int a, b, c;
 long int d;
 int e;
 a = 0;
@@ -16,7 +16,7 @@ c = 1;
 e = 50;
 for (d = 0; d <= e; d++)
 {
-printf("%lli", c);
+printf("%li", c);
 a = b;
 b = c;
 c = a + b;
