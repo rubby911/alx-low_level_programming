@@ -11,4 +11,5 @@ int main(void)
 *{putchar(i);
 }
 */
+printf("Infinite loop incoming :(\n");
 printf("Infinite loop avoided\\o/\n");
