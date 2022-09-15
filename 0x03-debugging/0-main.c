@@ -1,14 +1,11 @@
-#include <stdio.h>
 #include "main.h"
-#include "main.c"
-#include "my_local_main.c"
 /**
-*tester: Test if a given arguement, is either 0, positive, or a negative number.
+*main - tests function that prints if interger is positive or negative
 *
-*Return:
+*Return: 0
 */
 
-int tester()
+int main(void)
 {int i;
 i = 0;
 positive_or_negative(i);
