@@ -9,7 +9,7 @@
 *Return: Return either 1 or 0
 */
 
-int _isupper(char c)
+int _isupper(int c)
 {
 if (c >= 65 || c >= 90)
 {
@@ -20,3 +20,4 @@ else
 return (0);
 }
 }
+
