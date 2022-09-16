@@ -11,27 +11,25 @@
 
 
 int main(void)
-{large_number = 612852475143;
+{long  large_number = 612852475143;
 int a;
-int b = -1;
-int c;
-while (large_number % 2 == 0)
+while (a++ < large_number / 2)
 {
-b = 2;
-large_number = large_number / 2;
-}
-for (a = 3; a <=  sqrt(612852475143); a = a + 2)
+if (large_number % a == 0)
 {
-while (large_number %  a == 0)
+large_number /= 2;
+continue;
+}
+for (a = 3; a < large_number / 2; a += 2)
 {
-b = a;
-large_number = large_number / 1;
-}
-}
-if (large_number > 2)
+if (large_number % a == 0)
 {
-b = large_number;
+large_number /= a;
 }
-printf("%d", b)
+}
+}
+printf("%ld\n", large_number);
 return (0);
 }
+
+
