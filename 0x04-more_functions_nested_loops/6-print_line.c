@@ -18,6 +18,10 @@ if (n > 0)
 {
 _putchar('_');
 }
+else
+{
+_putchar('\n');
+}
 _putchar('\n');
 }
 }
