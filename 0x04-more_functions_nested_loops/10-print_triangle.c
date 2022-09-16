@@ -8,20 +8,20 @@
 */
 void print_triangle(int size)
 {
-int j;
-int k;
+int j1;
+int k2;
 if (size > 0)
 {
-for (j = 1; j <= size; j++)
+for (j1 = 1; j1 <= size; j1++)
 {
-for ((k = size - j); j > 0; j--)
+for ((k2 = size - j1); k2 > 0; k2--)
 {
 _putchar(' ')
-for (k = 0; k < j; k++)
+for (k2 = 0; k2 < j1; k2++)
 {
 _putchar('#');
-for (k = 0; k > j; k++)
-if (j == size)
+for (k2 = 0; k2 > j1; k2++)
+if (j1 == size)
 {
 continue;
 _putchar('\n');
