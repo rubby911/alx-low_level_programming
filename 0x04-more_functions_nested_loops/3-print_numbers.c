@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
 *print_numbers - prints intergers numbers 0 through 9
 *
