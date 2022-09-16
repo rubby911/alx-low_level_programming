@@ -21,7 +21,7 @@ myvalue = n;
 }
 if (myvalue / 10)
 {
-print_number(myvalues / 10)
+print_number(myvalue / 10);
 }
-_putchar((myvalue % 10) + '0')'
+_putchar((myvalue % 10) + '0');
 }
