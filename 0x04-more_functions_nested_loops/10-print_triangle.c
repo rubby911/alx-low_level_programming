@@ -7,23 +7,22 @@
 *Return: void
 */
 void print_triangle(int size)
-{int i;
+{
 int j;
 int k;
-if (size > 0)
+if (size <= 0)
 {
-for (i = 1; i <= size; i++)
-{
-for (j = size; j > i; j--)
-{_putchar(' ');
+_putchar('\n');
 }
-for (k = 0; k < i; k++)
+else
 {
-_putchar('#');
+for (j = 1; j <= size; j++)
+{
+for (k = j; k < size; k++)
+{
+_putchar(' ');
 }
 _putchar('\n');
 }
-else if (size <= 0)
-_putchar('\n');
 }
 }
