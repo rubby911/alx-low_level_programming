@@ -9,27 +9,24 @@
 */
 
 
-int main(void)
-{long int given_number = 612852475143;
-int i;
-int min = -1;
-while (given_number % 2 == 0)
+
+void print_number(int n)
+{unsigned int value;
+if (n < 10)
 {
-min = 2;
-given_number = given_number / 2;
+_putchar('-');
+value = -n;
 }
-for (i = 3; i <= sqrt(612852475143); i = i + 2)
+else
 {
-while (given_number % i == 0)
+value = n;
+}
+if (num / 10)
 {
-min = i;
-given_number = given_number / i;
+print_number(value / 10);
+_putchar('0' + value % 10);
 }
 }
-if (given_number > 2)
-{
-min = given_number;
-}
-printf("%d\n", min);
+
 return (0);
 }
