@@ -9,17 +9,15 @@
 
 
 void print_number(int n)
-{unsigned int myvalue;
+{unsigned int myvalue = n;
 if (n < 0)
 {
 _putchar('-');
-myvalue  = -n;
+myvalue  = -myvalue;
 }
-else
+if ((myvalue / 10) > 0)
 {
-myvalues = n;
-if (num / 10)
 print_number(num / 10);
-_putchar('0' + num % 10);
+_putchar((num % 10) + 48);
 }
 }
