@@ -10,23 +10,28 @@
 
 
 
-void print_number(int n)
-{unsigned int value;
-if (n < 10)
+int main(void)
+{large_number = 612852475143;
+int a;
+int b = -1;
+int c;
+while (large_number % 2 == 0)
 {
-_putchar('-');
-value = -n;
+b = 2;
+large_number = large_number / 2;
 }
-else
+for (a = 3; a <=  sqrt(612852475143); a = a + 2)
 {
-value = n;
-}
-if (num / 10)
+while (large_number %  a == 0)
 {
-print_number(value / 10);
-_putchar('0' + value % 10);
+b = a;
+large_number = large_number / 1;
 }
 }
-
+if (large_number > 2)
+{
+b = large_number;
+}
+printf("%d", b)
 return (0);
 }
