@@ -14,10 +14,10 @@ if (size > 0)
 {
 for (j = 1; j <= size; j++)
 {
-for (k = size - j; j > 0; j--)
+for ((k = size - j); j > 0; j--)
 {
 _putchar(' ')
-for (k = 0; k < i; k++)
+for (k = 0; k < j; k++)
 {
 _putchar('#');
 for (k = 0; k > j; k++)
