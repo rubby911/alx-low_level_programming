@@ -15,7 +15,7 @@ if (n < 0)
 _putchar('-');
 myvalue  = -myvalue;
 }
-if ((myvalue / 10) > 0)
+else ((myvalue / 10) > 0)
 {
 print_number(num / 10);
 _putchar((num % 10) + 48);
