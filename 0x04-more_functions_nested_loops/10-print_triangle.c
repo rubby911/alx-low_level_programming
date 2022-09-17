@@ -24,10 +24,10 @@ _putchar('#');
 }
 if (j1 == size)
 {
-continue
+continue;
 }
 _putchar('\n');
 }
 }
-_putchar('\n);
+_putchar('\n');
 }
