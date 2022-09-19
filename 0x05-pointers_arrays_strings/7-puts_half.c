@@ -15,7 +15,7 @@ for (len = 0; str[len] != '\0'; len++)
 i = (j / 2);
 if ((j % 2) == 1)
 {
-len = ((j + 1) / 2)
+len = ((j + 1) / 2);
 }
 }
 for (len = i; str[len] != '\0'; len++)
