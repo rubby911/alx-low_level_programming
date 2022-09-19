@@ -2,8 +2,8 @@
 
 /**
 *reset_to_98 - Modify the value of an int pointer variable to 98
-*@a: the value to be modified
-*Return: Not voidd
+*@n: the value to be modified
+*Return: voidd
 */
 
 void reset_to_98(int *n)
