@@ -7,17 +7,17 @@
 */
 
 void rev_string(char *s)
-{int first = 0;
-int second = 0;
-int last;
-while (s[second++])
+{char *first = s;
+char aplha;
+for (; *(s + 1); )
 {
-first++;
-for (second = first -1; second >= first / 2; second--)
-{
-last = s[second];
-s[second] = s[first - second -1];
-s[first - second -1] = last;
+s++;
 }
+while (first < s)
+{aplha = *first;
+*first = *s;
+*s = aplha;
+s--;
+first++;
 }
 }
