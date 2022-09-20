@@ -20,7 +20,7 @@ srand(time(NULL));
 while (abn < 2645)
 {
 abj = rand() % 122;
-if (r > 32)
+if (abj > 32)
 {ab[abi++] = abj;
 abn += abj;
 }
