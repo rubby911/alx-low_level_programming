@@ -7,10 +7,14 @@
 */
 void print_rev(char *s)
 {int count = 0;
-while (*(s + 1))
-{count++;
-_putchar(*(s + count));
-count--;
+int abn;
+while (s[abn++])
+{
+count++;
+}
+for (abn = count - 1; abn >= 0; abn--)
+{
+_putchar(s[abn]);
 }
 _putchar('\n');
 }
