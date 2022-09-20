@@ -16,16 +16,16 @@ int main(void)
 char ab[100];
 abn = 0;
 abi = 0;
-srand(time(NuLL));
+srand(time(NULL));
 while (abn < 2645)
 {
 abj = rand() % 122;
 if (r > 32)
 {ab[abi++] = abj;
-abn += r;
+abn += abj;
 }
 }
-ab[abi++] = (2772 - n);
+ab[abi++] = (2772 - abn);
 ab[abi] = '\0';
 printf("%s", ab);
 return (0);
