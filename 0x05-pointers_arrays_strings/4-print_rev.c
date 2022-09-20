@@ -6,15 +6,14 @@
 *@s: The string to be printed in reverse order
 */
 void print_rev(char *s)
-{int count = 0;
-int abn;
-while (s[abn++])
 {
-count++;
-}
-for (abn = count - 1; abn >= 0; abn--)
+int abn = 0;
+while (*(s + 1))
 {
-_putchar(s[abn]);
+abn++;
+_putchar(*(s + abn));
+abn--;
 }
 _putchar('\n');
 }
+
