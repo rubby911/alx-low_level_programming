@@ -7,21 +7,38 @@
 */
 
 int _atoi(char *s)
-{int abi, abj, abn, abx;
-abi = abn = 0;
-while ((s[abi] < '0' || s[abi] > '9') && (s[abi] != '\0'))
+{int abi = 0;
+int abd = 0;
+int abn = 0;
+int length = 0;
+int values = 0;
+int abf = 0;
+while (s[length] != '\0')
+{
+length++;
+}
+while (abi < length && abf == 0)
 {
 if (s[abi] == '-')
 {
-abx *= -1;
+values = s[abi] - '0';
+if (abd % 2)
+{
+values = -values;
+}
+abn = abn * 10 + values;
+abf = 1;
+if (s[abi + 1] < '0' || s[abi + 1] > '9')
+{
+break;
+}
+abf = 0;
 }
 abi++;
 }
-abj = abi;
-while ((s[abj] >= '0') && (s[abj] <= '9'))
+if (abf == 0)
 {
-abn = (abn * 10) + abx * ((s[abj]) - '0');
-abj++;
+return (0);
 }
-return (abn);
 }
+
