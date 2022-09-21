@@ -1,40 +1,20 @@
 #include "main.h"
 /**
- *_strcmp -compare 2 strings
- *@s1: The first string
- *@s2: The second string
- *Return: The strings
- */
+*reverse_array - Reverse arrys which contents are integers
+*@a: The interger arguement
+*@n: The numbers of interger contents
+*Return: Void
+*/
 
 
-int _strcmp(char *s1, char *s2)
-{int a, b, c;
-a = 0;
-b = 0;
-c = 0;
-while (s1[b] != 0)
+void reverse_array(int *a, int n)
+{int j, b, c;
+j = 0;
+for (b = n - 1; b > j; b--)
 {
-b++;
+c = a[b];
+a[b] = a[j];
+a[j] = c;
+j++;
 }
-while (s2[c] != 0)
-{
-c++;
-}
-while (s1[a] != '\0' && s2[a] != '\0')
-{
-if (s1[a] != s2[a])
-{
-return (s1[a] - s2[a]);
-}
-a++;
-}
-if (b > c)
-{
-return (s1[b] * -1);
-}
-else if (b < c)
-{
-return (s2[b] * -1);
-}
-return (0);
 }
