@@ -9,9 +9,14 @@
 */
 
 char *_strncat(char *dest, char *src, int n)
-{unsigned int a;
-for (a = 0; a < n; a++)
-{*(dest + a) = *(src + a);
+{int i, j;
+for (i = 0; dest[i]; != '\0'; i++)
+{
+i++;
+}
+for (j = 0; j < n && src[j] != '\0'; j++)
+{
+dest[i + j] = src[j];
 }
 return (dest);
 }
