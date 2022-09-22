@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-**cap_string - capitalizes all words of a string.
+**leet - capitalizes all words of a string.
 *@values: Place holder for arguement
 *Return: Returns 0
 */
