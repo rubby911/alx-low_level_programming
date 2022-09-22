@@ -7,11 +7,11 @@
 */
 
 
-char *cap_string(char *values)
+char *leet(char *values)
 {int i;
 int j;
-char first[] = "aeotlAEOT1L";
-char second[] = "43071430711";
+char first[] = "aeotlAEOTL";
+char second[] = "4307143071";
 for (i = 0; *(values + 1); i++)
 {
 for (j = 0; j <= 9; j++)

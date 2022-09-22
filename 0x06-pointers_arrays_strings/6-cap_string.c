@@ -8,38 +8,30 @@
 
 
 char *cap_string(char *values)
-{int i;
-for (i = 0; values[i] != '\0'; i++)
+{int i = 0;
+int j;
+char exceptions[] = "\t\n,;.!\"(){}";
+while (*(values + i))
 {
-if (values[i] == ' '
-|| values[i] == '\t'
-|| values[i] == '\n'
-|| values[i] == '.'
-|| values[i] == ','
-|| values[i] == '!'
-|| values[i] == '?'
-|| values[i] == '"'
-|| values[i] == '('
-|| values[i] == ')'
-|| values[i] == '{'
-|| values[i] == '}'
-)
+if (*(values + i) >= 'a' && *(values + i) <= 'z')
 {
+if (i == 0)
+{
+*(values + i) -= 'a' - 'A';
+}
+else
+{
+for (j = 0; j <= 12; j++)
+{
+if (exceptions[j] == *(values + i - 1))
+{
+*(values + i) -= 'a' - 'A';
+}
+}
+}
 i++;
-if (values[i] >= 'A' && values[i] <= 'Z')
-{
-i++;
-}
-else if (values[i] >= 'a' && values[i] <= 'z')
-{
-values[i] = values[i] - 32;
-i--;
-}
-}
-else if (values[0] >= 'a' && values[0] <= 'z')
-{
-values[0] = values[0] - 32;
 }
 }
 return (values);
 }
+
