@@ -9,37 +9,19 @@
 
 char *cap_string(char *values)
 {int i;
-for (i = 0; values[i] != '\0'; i++)
+int j;
+char first[] = "aeotlAEOT1L";
+char second[] = "43071430711";
+for (i = 0; *(values + 1); i++)
 {
-if (values[i] == ' '
-|| values[i] == '\t'
-|| values[i] == '\n'
-|| values[i] == '.'
-|| values[i] == ','
-|| values[i] == '!'
-|| values[i] == '?'
-|| values[i] == '"'
-|| values[i] == '('
-|| values[i] == ')'
-|| values[i] == '{'
-|| values[i] == '}'
-)
+for (j = 0; j <= 9; j++)
 {
-i++;
-if (values[i] >= 'A' && values[i] <= 'Z')
+if (first[j] == *(values + i))
 {
-i++;
+*(values + i) = second[j];
 }
-else if (values[i] >= 'a' && values[i] <= 'z')
-{
-values[i] = values[i] - 32;
-i--;
-}
-}
-else if (values[0] >= 'a' && values[0] <= 'z')
-{
-values[0] = values[0] - 32;
 }
 }
 return (values);
 }
+
