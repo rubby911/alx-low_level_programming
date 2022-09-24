@@ -14,7 +14,7 @@ if (n < 0)
 _putchar(45);
 i = -n;
 }
-else if (i / 10)
+if (i / 10)
 {
 print_number(i / 10);
 }
