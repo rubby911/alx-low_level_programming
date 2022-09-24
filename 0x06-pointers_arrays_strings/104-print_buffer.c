@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -26,11 +26,13 @@ if (j % 2)
 {
 putchar(' ');
 }
+}
 for (k = 0; k <= s; k++)
 {
 if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
 {
 putchar(c[l * 10 + k]);
+}
 else
 {
 putchar('.');
@@ -64,4 +66,5 @@ putchar('\n');
 if (size == 0)
 {
 putchar('\n');
-}}
+}
+}
