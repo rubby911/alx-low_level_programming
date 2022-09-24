@@ -7,37 +7,30 @@
 */
 
 
-char *cap_string(char *values)
+char *cap_string(char *s)
 {int i = 0;
-for (i = 0; values[i] != '\0'; i++)
-if (values[i] == ' '
-|| values[i] == '\t'
-|| values[i] == '\n'
-|| values[i] == '.'
-|| values[i] == ','
-|| values[i] == '!'
-|| values[i] == '?'
-|| values[i] == '"'
-|| values[i] == '('
-|| values[i] == ')'
-|| values[i] == '}'
-|| values[i] == '}'
-)
+int j;
+char a[] = " \t\n,;.!?\"(){}";
+while (*(s + i))
 {
+if (*(s + i) >= 'a' && *(s + i) <= 'z')
+{
+if (i == 0)
+{
+*(s + i) -= 'a' - 'A';
+}
+else
+{
+for (j = 0; j <= 12; j++)
+{
+if (a[j] == *(s + i - 1))
+{
+*(s + i) -= 'a' - 'A';
+}
+}
+}
+}
 i++;
-if (values[i] >= 'A' && values[i] <= 'Z')
-{
-i++;
 }
-else if (values[i] >= 'a' && values[i] <= 'z')
-{
-values[i] = values[i] - 32;
-i--;
-}
-else if (values[0] >= 'a' && values[0] <= 'z')
-{
-values[0] = values[0] - 32;
-}
-}
-return (values);
+return (s);
 }
