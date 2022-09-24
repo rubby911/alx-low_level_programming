@@ -2,7 +2,7 @@
 
 /**
 **cap_string - capitalizes all words of a string.
-*@values: Place holder for arguement
+*@s: Place holder for arguement
 *Return: Returns
 */
 
