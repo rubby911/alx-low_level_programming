@@ -15,10 +15,10 @@ if (s[a] == c)
 {
 return (&s[a]);
 }
+}
 if (c == '\0')
 {
 return (&s[a]);
 }
-return (0);
 }
 
