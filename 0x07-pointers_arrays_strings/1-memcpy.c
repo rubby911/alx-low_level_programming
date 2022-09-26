@@ -9,7 +9,7 @@
 
 char *_strchr(char *s, char c)
 {int j = 0;
-for (; s[j] >= '\n'; j++)
+for (; s[j] >= '\0'; j++)
 {
 if (s[j] == c)
 {
