@@ -18,7 +18,7 @@ if (s[a] == accept[b])
 {
 c++;
 }
-if (accept[b] == '\0')
+else if (accept[b] == '\0')
 {
 return (c);
 }
