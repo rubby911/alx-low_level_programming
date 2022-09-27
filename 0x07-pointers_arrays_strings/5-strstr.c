@@ -9,28 +9,27 @@
 
 
 char *_strstr(char *haystack, char *needle)
-{char *i = haystack;
-char *j = needle;
-while (*i)
+{unsigned int i = 0, j = 0;
+while (haystack[i])
 {
-j = needle;
-i = haystack;
-while (*j)
+while (needle[j] && (haystack[i] == needle[0]))
 {
-if (*i == *j)
+if (haystack[i + j] == needle[j])
 {
 j++;
-i++;
 }
 else
 {
 break;
 }
-if (*j == '\0')
+if (needle[j])
 {
-return (haystack);
-haystack++;
+i++;
+j = 0;
 }
+else
+{
+return (haystack + i);
 }
 }
 return (0);
