@@ -14,5 +14,5 @@ if (*s != 0)
 a++;
 return (a + _strlen_recursion(s + a));
 }
-return a;
+return (a);
 }
