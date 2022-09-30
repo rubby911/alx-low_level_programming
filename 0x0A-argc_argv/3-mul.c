@@ -15,11 +15,11 @@
 
 int main(int argc, char *argv[])
 {int i = 0, j = 0;
-if (argc >= 2)
+if (argc > 2)
 {
 i = atoi(argv[1]);
 j = atoi(argv[2]);
-printf("%d\n", i * j);
+printf("%d\n", i *j);
 }
 else
 {
