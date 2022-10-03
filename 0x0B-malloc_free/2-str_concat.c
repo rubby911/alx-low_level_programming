@@ -39,4 +39,3 @@ concat_string[concat_i++] = s2[i];
 }
 return (concat_string);
 }
-}
