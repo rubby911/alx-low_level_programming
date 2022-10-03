@@ -24,7 +24,7 @@ return (NULL);
 }
 for (i = 0; i < size; i++)
 {
-my_array[j] = c;
+my_array[i] = c;
 }
 return (my_array);
 }
