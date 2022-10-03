@@ -24,14 +24,18 @@ for (i = 0; s1[i] || s2[i]; i++)
 length++;
 }
 concat_string = malloc(sizeof(char) * length);
-if (concat_str == NULL)
-		return (NULL);
-
-	for (index = 0; s1[index]; index++)
-		concat_str[concat_index++] = s1[index];
-
-	for (index = 0; s2[index]; index++)
-		concat_str[concat_index++] = s2[index];
-
-	return (concat_str);
+if (concat_string == NULL)
+{
+return (NULL);
+}
+for (i = 0; s1[i]; i++)
+{
+concat_string[concat_i++] = s1[i];
+}
+for (i = 0; s2[i]; i++)
+{
+concat_string[concat_i++] = s2[i];
+}
+return (concat_string);
+}
 }
