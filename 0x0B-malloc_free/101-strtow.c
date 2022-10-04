@@ -83,7 +83,6 @@ for (; *str != ' ' && *str != '\0';)
 length++;
 str++;
 }
-}
 words[b] = malloc((length + 1) * sizeof(char));
 if (words[b] == 0)
 {
@@ -101,6 +100,7 @@ b++;
 c = 0;
 length = 0;
 str++;
+}
 }
 return (words);
 }
