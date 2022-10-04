@@ -39,11 +39,8 @@ return (num);
  */
 void free_everything(char **string, int i)
 {
-for (; i > 0;)
-{
-free(string[--i]);
+for (; i > 0;)free(string[--i]);
 free(string);
-}
 }
 
 
@@ -91,7 +88,6 @@ b++;
 c = 0;
 length = 0;
 str++;
-}
 }
 return (words);
 }
