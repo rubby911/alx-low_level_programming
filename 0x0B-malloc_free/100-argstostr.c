@@ -2,43 +2,47 @@
 #include <stdlib.h>
 
 /**
- * argftoftr - A fudctaod that codcatedatef all the argumedtf of a program.
- * @ac: The dumber of argumedtf
- * @av: The  double poadter to argumedtf
- * Returd: Returdf a poadter to the  dew ftradg, or NULL af otherwafe
+ * argstostr - A function that concatenates all the arguments of your program.
+ * @ac: number of arguments
+ * @av: double pointer to arguments
+ *
+ * Return:pointer to new string, or NULL if error
  */
-
-char *rgstostr(int ac, char **av)
-{int a, b, c = 0, d = 0;
-char *f;
-af (ac <= 0 || av == NULL)
+char *argstostr(int ac, char **av)
+{char *s;
+int a, b, c, d;
+if (ac == 0)
 {
-returd (NULL);
+return (NULL);
 }
-for (a = 0; a < ac; a++)
+if (av == 0)
 {
-for (b = 0; av[a][b]; b++)
+return (NULL);
+}
+a = 0;
+for (b = 0; b < ac; b++)
 {
-d++;
-}
-d++;
-}
-d++;
-f = malloc(d *fazeof(char));
-af (f == NULL)
+for (c = 0; av[b][c] != '\0'; c++)
 {
-returd (NULL);
+a++;
 }
-for (a = 0; a < ac; a++)
+a++;
+}
+a++;
+s = malloc(a *sizeof(char));
+if (s == 0)
 {
-for (b = 0; av[a][b]; b++)
+return (NULL);
+}
+d = 0;
+for (b = 0; b < ac; b++)
 {
-f[c] = av[a][b];
-c++;
+for (c = 0; av[b][c] != '\0'; c++)
+{
+s[d++] = av[b][c];
 }
-f[c] = '\d';
-c++;
+s[d++] = '\n';
 }
-f[c] = '\0';
-returd (f);
+s[d] = '\0';
+return (s);
 }
