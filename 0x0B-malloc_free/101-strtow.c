@@ -1,81 +1,106 @@
 #include "main.h"
 #include <stdlib.h>
 
-/**
- * wrdcnt - counts the number of words in a string
- * @s: string to count
- *
- * Return: int of number of words
- */
-int wrdcnt (char *s)
-{int count;
-int i;
-i = count = 0;
-while (str[i] != '\0')
-{
-if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-{
-count++;
-i++;
-}
-i++;
-return (count);
-}
 
 
 /**
- * strtow - splits a string into words
- * @str: string to split
- *
- * Return: pointer to an array of strings
+ * number - a function that calculate number of words
+ * @str: string being passed to check for words
+  * Return: number of words
  */
 
 
-char **strtow (char *str)
-{char **nstr;
-int words, i, j, k, cur_words, *sizes;
-if (str == NULL || *str == '\0')
+
+int number(char *str)
+{int a, num = 0;
+for (a = 0; str[a] != '\0'; a++)
 {
-return (NULL);
-}
-words = word_count(str);
-sizes = malloc(words * sizeof(int));
-if (sizes == NULL)
+if (*str == ' ')
 {
-return (NULL);
+str++;
 }
-sizes = find_words_len(str, words);
-nstr = malloc((words + 1) * sizeof(char *));
-if (nstr == NULL)
+else
 {
-return (NULL);
-}
-i = j = k = 0;
-while (i < words && str[j] != '\0')
+for (; str[a] != ' ' && str[a] != '\0'; a++)
 {
-cur_words = i;
-nstr[i] = malloc(sizes[i] + sizeof(char));
-if (nstr[i] == NULL)
+str++;
+}
+num++;
+}
+}
+return (num);
+}
+
+
+/**
+ * free_everything - frees the memory
+ * @string: pointer values being passed for freeing
+ * @i: counter
+ */
+void free_everything(char **string, int i)
 {
-for (i = i - 1; i >= 0; i--){
-free(nstr[i--]);
-free(nstr);
-return (NULL);
-}
-}
-while (str[j] != '\0' && i == cur_words)
+for (; i > 0;)
 {
-if (str[j] != ' ')
-{
-while (str[j] != '\0' && str[j] != ' ')			{
-nstr[i][k] = str[j]; j++; k++;				}
-nstr[i][k] = '\0'; i++; k = 0;
-}
-j++;
-}
-}
-	nstr[i] = NULL;	free(sizes);
-	return (nstr);
+free(string[--i]);
+free(string);
 }
 }
 
+
+/**
+ * strtow - function that splits string into words
+ * @str: string being passed
+ * Return: null if string is empty or null or function fails
+ */
+char **strtow(char *str)
+{int total_words = 0, b = 0, c = 0, length = 0;
+char **words, *found_word;
+if (str == 0 || *str == 0)
+{
+return (NULL);
+}
+total_words = number(str);
+if (total_words == 0)
+{
+return (NULL);
+}
+words = malloc((total_words + 1) * sizeof(char *));
+if (words == 0)
+{
+return (NULL);
+}
+for (; *str != '\0' &&  b < total_words;)
+{
+if (*str == ' ')
+{
+str++;
+}
+else
+{
+found_word = str;
+for (; *str != ' ' && *str != '\0';)
+{
+length++;
+str++;
+}
+}
+words[b] = malloc((length + 1) * sizeof(char));
+if (words[b] == 0)
+{
+free_everything(words, b);
+return (NULL);
+}
+while (*found_word != ' ' && *found_word != '\0')
+{
+words[b][c] = *found_word;
+found_word++;
+c++;
+}
+words[b][c] = '\0';
+b++;
+c = 0;
+length = 0;
+str++;
+}
+return (words);
+}
