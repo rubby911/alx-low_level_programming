@@ -7,24 +7,23 @@
 */
 
 int main(void)
-{long int a, b, c;
+{long int a = 1, b = 2, c = 0;
 long int d;
-int e;
-a = 0;
-b = 1;
-c = 1;
-e = 49;
-for (d = 0; d <= e; d++)
+printf("%lu, ", a);
+printf("%lu, ", b);
+for (d = 3; d <= 50; d++)
 {
-printf("%li", c);
+c = a + b;
 a = b;
 b = c;
-c = a + b;
-if (d <= 49)
+if (d < 50)
 {
-printf(", ");
+printf("%lu, ", c);
+}
+else
+{
+printf("%lu\n", c);
 }
 }
-printf("\n");
 return (0);
 }
