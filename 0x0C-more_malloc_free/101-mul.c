@@ -2,125 +2,100 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * check_num - function to check the string for number
- * @st: string being passed
- * Return: 1 for number 0 for not
- */
-int check_num(char *st)
-{
-	int a;
 
-	for (a = 0; st[a] != '\0'; a++)
-	{
-		if (st[a] < '0' || st[a] > '9')
-			return (0);
-	}
-	return (1);
-}
 /**
- * string_length - calculating string length
- * @str: string to check
- * Return: count
+ * _print - moves a string one place to the left and prints the string
+ * @str: string to move
+ * @l: size of string
  *
+ * Return: void
  */
-unsigned int string_length(char *str)
+void _print(char *str, int l)
 {
-	int a;
+	int i, j;
 
-	for (a = 0; str[a] != '\0'; a++)
-		a++;
-	return (a);
-}
-
-/**
- * print_string - function to print string
- * @st: string to print
- * Return: none
- */
-void print_string(char *st)
-{
-	while (*st == '\0')
-		st++;
-	if (*st == '\0')
-		_putchar('0');
-	while (*st == '0')
-		st++;
-	while (*st != '\0')
+	i = j = 0;
+	while (i < l)
 	{
-		_putchar(*st);
-		st++;
+		if (str[i] != '0')
+			j = 1;
+		if (j || i == l - 1)
+			_putchar(str[i]);
+		i++;
 	}
+
 	_putchar('\n');
+	free(str);
 }
 
 /**
- * _calloc - function for memory
- * @number: the number
- * @size: the size
- * Return: pointer to memory
+ * mul - multiplies a char with a string and places the answer into dest
+ * @n: char to multiply
+ * @num: string to multiply
+ * @num_index: last non NULL index of num
+ * @dest: destination of multiplication
+ * @dest_index: highest index to start addition
+ *
+ * Return: pointer to dest, or NULL on failure
  */
-void *_calloc(unsigned int number, unsigned int size)
+char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
-	char *p;
-	unsigned int a;
+	int j, k, mul, mulrem, add, addrem;
 
-	if (number == 0 || size == 0)
+	mulrem = addrem = 0;
+	for (j = num_index, k = dest_index; j >= 0; j--, k--)
+	{
+		mul = (n - '0') * (num[j] - '0') + mulrem;
+		mulrem = mul / 10;
+		add = (dest[k] - '0') + (mul % 10) + addrem;
+		addrem = add / 10;
+		dest[k] = add % 10 + '0';
+	}
+	for (addrem += mulrem; k >= 0 && addrem; k--)
+	{
+		add = (dest[k] - '0') + addrem;
+		addrem = add / 10;
+		dest[k] = add % 10 + '0';
+	}
+	if (addrem)
+	{
 		return (NULL);
-	p = malloc(number * size);
-	if (p == 0)
-		return (NULL);
-	for (a = 0; a < (number * size); a++)
-		p[a] = 0;
-	return (p);
+	}
+	return (dest);
 }
-
 /**
- * main - function to multiply
- * @argc: number of arguments passed
- * @argv: argument variables
- * Return: Always zero
+ * check_for_digits - checks the arguments to ensure they are digits
+ * @av: pointer to arguments
+ *
+ * Return: 0 if digits, 1 if not
  */
-int main(int argc, char **argv)
+int check_for_digits(char **av)
 {
-	char *n1, *n2, *multi_res;
-	unsigned int l = 0, l1 = 0, l2 = 0, a, b, t = 0, c = 0, ten = 0;
+	int i, j;
 
-	if (argc < 3)
+	for (i = 1; i < 3; i++)
 	{
-		print_string("Error");
-		exit(98);
-	}
-	n1 = argv[1];
-	n2 = argv[2];
-	if (!(check_num(n1) && check_num(n2)))
-	{
-		print_string("Error");
-		exit(98);
-	}
-	l1 = string_length(n1);
-	l2 = string_length(n2);
-	l = l1 + l2;
-	multi_res = _calloc(l + 1, sizeof(char *));
-	if (multi_res == 0)
-	{
-		print_string("Error");
-		exit(98);
-	}
-	for (a = 0; a < l1; a++, ten++)
-	{
-		for (c = 0, b = 0; b < l2; b++)
+		for (j = 0; av[i][j]; j++)
 		{
-			t = (n1[l1 - a - 1] - '0') * (n2[l2 - b - 1] - '0') + c;
-			printf("%u\n", t);
-			if (multi_res[l - b - ten - 1] > 0)
-				t = t + multi_res[l - b - ten - 1] - '0';
-			multi_res[l - b - ten - 1] = t % 10 + '0';
-			c = t / 10;
+			if (av[i][j] < '0' || av[i][j] > '9')
+				return (1);
 		}
-		multi_res[l - b - ten - 1] += c + '0';
 	}
-	print_string(multi_res);
-	free(multi_res);
 	return (0);
+}
+
+/**
+ * init - initializes a string
+ * @str: sting to initialize
+ * @l: length of strinf
+ *
+ * Return: void
+ */
+void init(char *str, int l)
+{
+	int i;
+
+	for (i = 0; i < l; i++)
+		str[i] = '0';
+	str[i] = '\0';
 }
