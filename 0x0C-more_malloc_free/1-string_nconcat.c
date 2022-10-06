@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
  * string_nconcat - A function that concatenates two strings
- * @s1: string one being passed
- * @s2: string two being passed
+ * @s1: First string to being passed
+ * @s2: Second string to be passed
  * @n: size
  * Return: Always 0.
  */
