@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int main()
+{
+return (0);
+}
 
 /**
  * _print - moves a string one place to the left and prints the string
